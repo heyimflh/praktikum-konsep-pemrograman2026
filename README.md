@@ -19,7 +19,7 @@
   🎯 >> <a href="Daftar Materi.md"><b>Klik Disini untuk membuka materi praktikum</b></a> << 🎯
 </h3>
 
-<p align="center" ><img src="https://github.com/Adam-pw/Adam-pw/blob/main/animation_500_kxa883sd.gif" alt="adam-pw" width="300" height="300"/></p>
+<p align="center"> <img src="https://github.com/Adam-pw/Adam-pw/blob/main/animation_500_kxa883sd.gif" alt="adam-pw" width="300" height="300"/> </p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
