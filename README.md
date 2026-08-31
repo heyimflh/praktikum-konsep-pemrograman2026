@@ -19,6 +19,8 @@
   🎯 >> <a href="Daftar Materi.md"><b>Klik Disini untuk membuka materi praktikum</b></a> << 🎯
 </h3>
 
+<p align="center" ><img src="https://github.com/Adam-pw/Adam-pw/blob/main/animation_500_kxa883sd.gif" alt="adam-pw" width="300" height="300"/></p>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%"/>
 </p>
@@ -52,17 +54,15 @@ Repository ini berisi kumpulan **materi, modul, dan tugas praktikum** untuk mata
   </tr>
   <tr>
     <td>Muhammad Fakhri Abdullah</td>
-    <td>IF</td>
+    <td>IF 25</td>
     <td><a href="https://github.com/heyimflh"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a></td>
   </tr>
   <tr>
     <td>Iqbal Rifa'i</td>
-    <td>IF</td>
+    <td>IF 25</td>
     <td><a href="https://github.com/ballrifai"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/></a></td>
   </tr>
 </table>
-
-> *(Ganti link GitHub di atas dengan profil masing-masing ya)*
 
 ## 📂 Struktur Materi
 
@@ -80,11 +80,13 @@ PraktikumKP2025/
 ## 💬 Connect with us
 
 <p align="center">
+  <a href="https://wa.me/6285700622035" target="_blank">
+    <img src="https://img.shields.io/badge/WhatsApp%20(Fakhri)-25D366.svg?style=for-the-badge&logo=whatsapp&logoColor=white" alt="whatsapp fakhri" height="32"/>
+  </a>
   <a href="https://wa.me/6289520894824" target="_blank">
-    <img src="https://img.shields.io/badge/whatsapp-25D366.svg?style=for-the-badge&logo=whatsapp&logoColor=white" alt="whatsapp" height="32"/>
+    <img src="https://img.shields.io/badge/WhatsApp%20(Iqbal)-25D366.svg?style=for-the-badge&logo=whatsapp&logoColor=white" alt="whatsapp iqbal" height="32"/>
   </a>
 </p>
-
 
 ## 🛠️ Languages and Tools
 
