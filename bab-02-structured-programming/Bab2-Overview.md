@@ -40,5 +40,5 @@ Atau langsung jalankan dari VS Code menggunakan extension **Code Runner** / **C/
 
 ---
 <div align="center">
-⬅️ <b><a href="Daftar_Materi.md">Kembali ke Daftar Materi Utama</a></b>
+⬅️ <b><a href="../Daftar_Materi.md">Kembali ke Daftar Materi Utama</a></b>
 </div>

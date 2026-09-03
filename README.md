@@ -68,11 +68,12 @@ Repository ini berisi kumpulan **materi, modul, dan tugas praktikum** untuk mata
 
 ```
 praktikum-konsep-pemrograman2026/
-├── Daftar_Materi.md          <-- (Mulai dari sini, navigasi utama)
-├── Bab2-Overview.md          <-- Pengantar Bab 2
-├── 01-Pengantar-C-dan...md   <-- File materi
-├── 02-Algoritma-...md
-└── ... (Materi bab selanjutnya)
+├── Daftar_Materi.md                 <-- (Mulai dari sini, navigasi utama)
+├── bab-02-structured-programming/   <-- Kumpulan materi per bab
+│   ├── Bab2-Overview.md             <-- Pengantar bab
+│   ├── 01-Pengantar-C-dan...md      <-- Modul materi
+│   └── 02-Algoritma-...md
+└── ... (Folder bab selanjutnya)
 ```
 
 

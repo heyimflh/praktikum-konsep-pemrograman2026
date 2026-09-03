@@ -23,11 +23,11 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ✅ | **0** | [**Pendahuluan & Overview Bab 2**](Bab2-Overview.md) |
-| ✅ | **i** | [Pengantar (Program Sederhana, Variabel, dan Basic I/O)](01-Pengantar-C-dan-Variabel.md) |
-| ✅ | **ii** | [Algoritma, Pseudocode, dan Source Code](02-Algoritma-Pseudocode-SourceCode.md) |
-| ✅ | **iii** | [Operasi Assignment dan Aritmatika](03-Operator-Aritmatika-dan-Assignment.md) |
-| ✅ | **iv** | [Pemilihan dan Perulangan Sederhana](04-PemilihandanPerulanganSederhana.md) |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 2**](bab-02-structured-programming/Bab2-Overview.md) |
+| ✅ | **i** | [Pengantar (Program Sederhana, Variabel, dan Basic I/O)](bab-02-structured-programming/01-Pengantar-C-dan-Variabel.md) |
+| ✅ | **ii** | [Algoritma, Pseudocode, dan Source Code](bab-02-structured-programming/02-Algoritma-Pseudocode-SourceCode.md) |
+| ✅ | **iii** | [Operasi Assignment dan Aritmatika](bab-02-structured-programming/03-Operator-Aritmatika-dan-Assignment.md) |
+| ✅ | **iv** | [Pemilihan dan Perulangan Sederhana](bab-02-structured-programming/04-PemilihandanPerulanganSederhana.md) |
 
 </details>
 
