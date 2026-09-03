@@ -12,11 +12,11 @@
   <img src="https://img.shields.io/badge/Bahasa-C-00599C?style=for-the-badge&logo=c&logoColor=white"/>
   <img src="https://img.shields.io/badge/Semester-Ganjil-orange?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Status-Aktif-brightgreen?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/last-commit/AdhifCode/PraktikumKP2025?style=for-the-badge&color=blueviolet"/>
+  <img src="https://img.shields.io/github/last-commit/heyimflh/praktikum-konsep-pemrograman2026?style=for-the-badge&color=blueviolet"/>
 </p>
 
 <h3 align="center">
-  🎯 >> <a href="Daftar Materi.md"><b>Klik Disini untuk membuka materi praktikum</b></a> << 🎯
+  🎯 >> <a href="Daftar_Materi.md"><b>Klik Disini untuk membuka materi praktikum</b></a> << 🎯
 </h3>
 
 <p align="center"> <img src="https://github.com/Adam-pw/Adam-pw/blob/main/animation_500_kxa883sd.gif" alt="adam-pw" width="300" height="300"/> </p>
@@ -67,15 +67,14 @@ Repository ini berisi kumpulan **materi, modul, dan tugas praktikum** untuk mata
 ## 📂 Struktur Materi
 
 ```
-PraktikumKP2025/
-├── Modul-01-Dasar-C/
-├── Modul-02-Percabangan/
-├── Modul-03-Perulangan/
-├── Modul-04-Array/
-├── Modul-05-Fungsi/
-├── Modul-06-Pointer/
-└── Daftar Materi.md
+praktikum-konsep-pemrograman2026/
+├── Daftar_Materi.md          <-- (Mulai dari sini, navigasi utama)
+├── Bab2-Overview.md          <-- Pengantar Bab 2
+├── 01-Pengantar-C-dan...md   <-- File materi
+├── 02-Algoritma-...md
+└── ... (Materi bab selanjutnya)
 ```
+
 
 ## 💬 Connect with us
 
