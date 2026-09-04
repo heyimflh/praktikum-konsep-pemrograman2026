@@ -94,4 +94,4 @@ int hasil2 = (2 + 3) * 4;   // = 5 * 4 = 20  (kurung mengubah urutan)
 4. Buat program sederhana kalkulator (`+ - * /`) dua bilangan bulat yang diinput pengguna, dengan hasil pembagian ditampilkan sebagai desimal 2 angka di belakang koma.
 
 ---
-⬅️ [Sebelumnya: Algoritma, Pseudocode & Source Code](02-Algoritma-Pseudocode-SourceCode.md) | ➡️ [Lanjut: Percabangan](04-Percabangan.md)
+⬅️ [Sebelumnya: Algoritma, Pseudocode & Source Code](02-Algoritma-Pseudocode-SourceCode.md) | ➡️ [Lanjut: Pemilihan dan Perulangan](04-PemilihandanPerulanganSederhana.md)
