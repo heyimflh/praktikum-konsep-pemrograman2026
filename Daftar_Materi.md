@@ -37,10 +37,11 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Pemilihan dengan Switch |
-| ⏳ | **ii** | Perulangan Menggunakan For Statement |
-| ⏳ | **iii** | Perulangan Menggunakan Do While |
-| ⏳ | **iv** | Break dan Continue |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 3**](bab-03-program-control/Bab3-Overview.md) |
+| ✅ | **i** | [Pemilihan dengan Switch](bab-03-program-control/01-Pemilihan-Dengan-Switch.md) |
+| ✅ | **ii** | [Perulangan Menggunakan For Statement](bab-03-program-control/02-Perulangan-Menggunakan-For-Statement.md) |
+| ✅ | **iii** | [Perulangan Menggunakan Do While](bab-03-program-control/03-Perulangan-Menggunakan-Do-While.md) |
+| ✅ | **iv** | [Break dan Continue](bab-03-program-control/04-Break-Dan-Continue.md) |
 
 </details>
 
@@ -50,10 +51,11 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Pengenalan Function |
-| ⏳ | **ii** | Fungsi-Fungsi Penting C |
-| ⏳ | **iii** | Aturan Scope |
-| ⏳ | **iv** | Rekursi |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 4**](bab-04-function/Bab4-Overview.md) |
+| ✅ | **i** | [Pengenalan Function](bab-04-function/01-Pengenalan-Function.md) |
+| ✅ | **ii** | [Fungsi-Fungsi Penting C (Library)](bab-04-function/02-Fungsi-Library-C.md) |
+| ✅ | **iii** | [Aturan Scope](bab-04-function/03-Aturan-Scope.md) |
+| ✅ | **iv** | [Rekursi](bab-04-function/04-Rekursi.md) |
 
 </details>
 

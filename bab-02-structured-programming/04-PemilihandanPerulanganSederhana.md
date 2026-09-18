@@ -1,205 +1,195 @@
-[<< Materi Sebelumnya (Operasi Assignment dan Aritmatika) <<](3-OperasiAssignmentdanAritmatika.md)
-# 2.4 - Pemilihan dan Perulangan Sederhana
+<div align="center">
 
-Salah satu hal yang paling fundamental dalam pemrograman adalah adanya operasi pemilihan dan perulangan.
+# 🔀 2.4 Pemilihan dan Perulangan Sederhana
+### Bab 2: Structured Programming · Logika Pengambilan Keputusan & Iterasi
 
-**Pemilihan** (atau pengambilan keputusan/decision making) adalah tindakan yang akan dilakukan oleh program apabila dihadapkan pada beberapa pilihan atau kondisi yang akan memproduksi instruksi yang berbeda.
+[⬅️ Modul 2.3: Operator Aritmatika](03-Operator-Aritmatika-dan-Assignment.md) &nbsp;•&nbsp; [Overview Bab 2](Bab2-Overview.md) &nbsp;•&nbsp; [Masuk ke Bab 3: Program Control ➡️](../bab-03-program-control/Bab3-Overview.md)
 
-Kemudian **perulangan** adalah kemampuan program untuk **melakukan sekumpulan instruksi yang sama berulang kali** selama **kondisi tertentu memenuhi**. Apabila kondisi perulangan tersebut **selalu memenuhi**, maka yang dikhawatirkan adalah terjadinya **infinite loop** atau program akan berjalan selamanya sehingga berpotensi crash/hang. Oleh karena itu, perhatikan betul dalam menggunakan operasi perulangan.
+---
 
-Operasi pemilihan yang akan digunakan di sini adalah **if - else**, sedangkan operasi perulangan yang digunakan adalah **while**.
+</div>
 
-## Pemilihan: if - else
+## 🧠 Dua Pilar Terpenting Pemrograman
 
-Format penggunannya yaitu:
-```c
-if (/* kondisi */) {
-    /* perintah... */
-}
-/* opsional: */
-else if (/* kondisi lain */) {
-    /* perintah... */
-}
-else if (/* kondisi lainnya lagi) {
-    /* perintah... */
-}
-/* else if ... */
-else {
-    /* perintah... */
-}
+Sebuah program komputer akan sangat kaku jika hanya berjalan lurus dari atas ke bawah. Dua kemampuan utama yang membuat program terasa "cerdas" adalah:
+
+1. **Pemilihan (*Decision Making / Branching*):** Kemampuan memilih jalur instruksi yang berbeda berdasarkan kondisi tertentu (menggunakan `if-else`).
+2. **Perulangan (*Iteration / Looping*):** Kemampuan mengeksekusi sekumpulan instruksi yang sama berulang kali secara otomatis selama syarat masih terpenuhi (menggunakan `while`).
+
+---
+
+## 1️⃣ Pemilihan: Struktur `if - else`
+
+Konstruksi `if-else` memungkinkan program menguji sebuah ekspresi logika. Jika kondisi bernilai **BENAR (True / bernilai bukan 0)**, blok kode di dalamnya akan dieksekusi.
+
+```mermaid
+flowchart TD
+    Start([Mulai]) --> Cond{Apakah Kondisi Terpenuhi?}
+    Cond -- YA (True) --> ActionTrue[Jalankan Blok IF]
+    Cond -- TIDAK (False) --> ActionFalse[Jalankan Blok ELSE / Lanjut]
+    ActionTrue --> Selesai([Lanjut Baris Berikutnya])
+    ActionFalse --> Selesai
 ```
 
-Contoh penggunaan if-else dalam program C adalah sebagai berikut:
+### Sintaks Lengkap:
 
-Potongan kode berikut menampilkan "Bagus!" di layar ketika `nilaiSaya` **memiliki value 100**
 ```c
-if (nilaiSaya == 100) {
-    printf("Bagus!\n");
-}
-```
-
-Potongan kode berikut menampilkan "Bagus!" di layar ketika `nilaiSaya` memiliki value **lebih dari atau sama dengan 85**, atau "Coba lagi!" jika tidak
-```c
-if (nilaiSaya >= 85) {
-    printf("Bagus!\n");
+if (/* kondisi 1 */) {
+    // Dijalankan jika kondisi 1 BENAR
+} else if (/* kondisi 2 */) {
+    // Dijalankan jika kondisi 1 SALAH, tetapi kondisi 2 BENAR
 } else {
-    printf("Coba lagi\n");
+    // Dijalankan jika SEMUA kondisi di atas SALAH
 }
 ```
 
-Potongan kode berikut menampilkan "Bagus!" di layar ketika `nilaiSaya` memiliki value **lebih dari atau sama dengan 85**, "Cukup" ketika `nilaiSaya` **kurang dari 85** tetapi **lebih besar dari atau sama dengan 50**, "Coba lagi" jika tidak memenuhi semuanya
-```c
-if (nilaiSaya >= 85) {
-    printf("Bagus!\n");
-} else if ((nilaiSaya < 85) && (nilaiSaya >= 50)) {
-    printf("Cukup\n");
-} else {
-    printf("Coba lagi\n");
-}
-```
+---
 
-Potongan kode berikut menampilkan "Lulus" di layar ketika `nilaiSaya` memiliki value **lebih dari atau sama dengan 50** dan "Tidak lulus" apabila memiliki value **kurang dari 50**
-```c
-if (nilaiSaya >= 50) {
-    printf("Lulus\n");
-} else if (nilaiSaya < 50) {
-    printf("Tidak lulus\n");
-}
-```
+## ⚖️ Operator Relasional & Logika
 
-### Operator Pembanding
+### 1. Operator Relasional (Pembanding Nilai)
 
-|Operator|Keterangan|Penjelasan|
-|--|--|--|
-|A == B|sama dengan|cek jika A sama dengan B|
-|A != B|tidak sama dengan|cek jika A tidak sama dengan B|
-|A > B|lebih besar dari|cek jika A lebih besar dari B|
-|A >= B|lebih besar dari atau sama dengan|cek jika A lebih besar dari atau sama dengan B|
-|A < B|kurang dari|cek jika A kurang dari B|
-|A <= B|kurang dari atau sama dengan|cek jika A kurang dari atau sama dengan B|
+| Operator | Arti | Contoh | Hasil Uji |
+|:---:|---|---|:---:|
+| `==` | Sama dengan | `5 == 5` | **Benar (True)** |
+| `!=` | Tidak sama dengan | `5 != 3` | **Benar (True)** |
+| `>` | Lebih besar dari | `10 > 7` | **Benar (True)** |
+| `<` | Lebih kecil dari | `4 < 2` | **Salah (False)** |
+| `>=` | Lebih besar atau sama dengan | `5 >= 5` | **Benar (True)** |
+| `<=` | Lebih kecil atau sama dengan | `3 <= 2` | **Salah (False)** |
 
-### Konjungsi
+> [!CAUTION]
+> ### 🚨 Awas Tertukar: `==` vs `=`
+> - `==` adalah **operator pembanding** (menguji apakah dua nilai sama).
+> - `=` adalah **operator assignment** (memasukkan nilai ke variabel).
+> 
+> Menulis `if (nilai = 100)` di C tidak akan error, tetapi akan **selalu dianggap BENAR** karena nilai 100 dimasukkan ke variabel! Selalu gunakan `if (nilai == 100)`.
 
-|Operator|Keterangan|Penjelasan|
-|--|--|--|
-|!A|tidak (NOT)|dijalankan apabila kondisi A tidak bernilai benar|
-|A && B|dan (AND)|dijalankan apabila kondisi A dan B semuanya benar|
-|A \|\| B|atau (OR)|dijalankan apabila kondisi A bernilai benar atau B bernilai benar (salah satu dari A dan B bernilai benar)|
+### 2. Operator Logika (Penggabung Kondisi)
 
-### Tips
+| Simbol | Nama | Keterangan | Contoh |
+|:---:|:---:|---|---|
+| `&&` | **AND** (Dan) | Benar HANYA JIKA **kedua sisi** bernilai benar. | `(nilai >= 80) && (hadir >= 75)` |
+| `\|\|` | **OR** (Atau) | Benar jika **salah satu atau kedua sisi** bernilai benar. | `(hari == 'S') \|\| (hari == 'M')` |
+| `!` | **NOT** (Bukan) | Membalikkan nilai logika (Benar $\to$ Salah, Salah $\to$ Benar). | `!(umur < 17)` |
 
-- Selalu gunakan tanda kurung ( dan ) apabila diperlukan untuk mempertegas urutan evaluasi. Jika tidak diberi tanda kurung, program akan mengevaluasi operasi NOT atau `!` terlebih dahulu, kemudian operasi AND atau `&&`, kemudian yang terakhir operasi OR atau `||`.
+---
 
-### Source Code
+## 💻 Contoh Nyata: Sistem Penilaian Mahasiswa
 
-<details>
-<summary>Contoh source code (full)</summary>
+Berikut program lengkap untuk mengonversi nilai angka menjadi predikat kelulusan:
 
 ```c
 #include <stdio.h>
-int main() {
-    int nilaiSaya;
-    
-    printf("Masukkan nilai anda: ");
-    scanf("%d", &nilaiSaya);
 
-    if (nilaiSaya >= 85) {
-        printf("Bagus!\n");
-    } else if ((nilaiSaya < 85) && (nilaiSaya >= 50)) {
-        printf("Cukup\n");
+int main() {
+    int nilai;
+
+    printf("=============================\n");
+    printf("  SISTEM PENENTU PREDIKAT   \n");
+    printf("=============================\n");
+    printf("Masukkan nilai ujian (0-100): ");
+    scanf("%d", &nilai);
+
+    if (nilai >= 85) {
+        printf("Predikat: Amat Baik (Nilai A) 🎉\n");
+    } else if (nilai >= 70) {
+        printf("Predikat: Baik (Nilai B) 👍\n");
+    } else if (nilai >= 55) {
+        printf("Predikat: Cukup (Nilai C) 🙂\n");
     } else {
-        printf("Coba lagi\n");
+        printf("Predikat: Perlu Remedial (Nilai D/E) 💪 Tetap Semangat!\n");
     }
 
     return 0;
 }
-
-/*
-Output:
-
-Masukkan nilai anda: 80
-Cukup
-*/
-```
-</details>
-
-## Perulangan: while
-
-Format penggunaannya yaitu:
-```c
-while (/* kondisi */) {
-    /* perintah... */
-}
 ```
 
-Contoh penggunaan while dalam program C adalah sebagai berikut:
+---
 
-Potongan kode berikut menampilkan "Quack!" sebanyak 10 kali di layar console
-```c
-int i = 1;
-while (i <= 10) {
-    printf("Quack!\n");
-    i++;
-}
+## 2️⃣ Perulangan Sederhana: Struktur `while`
+
+Perulangan `while` terus menjalankan instruksinya selama kondisi yang diuji di dalam kurung bernilai **True**.
+
+```mermaid
+flowchart TD
+    Mulai([Awal While]) --> Cek{Kondisi Benar?}
+    Cek -- YA --> Eksekusi[Jalankan Blok Kode]
+    Eksekusi --> Update[Update Nilai Counter]
+    Update --> Cek
+    Cek -- TIDAK --> Keluar([Keluar dari Loop])
 ```
 
-Analisa kode di atas:
+### 3 Unsur Wajib Perulangan:
+1. **Inisialisasi Nilai Awal:** Menyiapkan variabel penghitung (counter).
+2. **Kondisi Berhenti:** Batas kapan perulangan harus berakhir.
+3. **Pembaruan Counter (Update):** Mengubah nilai counter (biasanya `i++` atau `i--`). Tanpa bagian ini, program akan terjebak **Infinite Loop**!
 
-1. Variabel `i` dideklarasikan kemudian diisi dengan nilai 1
-2. Selagi `i` bernilai kurang dari atau sama dengan 10, maka jalankan perintah `printf("Quack!\n")` kemudian `i++`. Dalam tahap ini, sembari mengulang operasi, program menampilakn "Quack!" ke console kemudian nilai dari variabel `i` di-*increment* (ditambah dengan 1) kemudian kedua perintah tersebut diulang terus menerus sampai tidak memenuhi kondisi `i <= 10` (variabel `i` bernilai 11 dan 11 <= 10 tentu tidak benar) sehingga program dapat keluar dari perulangan.
-
-**Q:** Bagaimana bisa keluar dari perulangan?
-
-**A:** Karena saat `i` mencapai nilai 10, maka akan di-*increment* supaya nilainya menjadi 11 dan dengan demikian, ulangan berikutnya sudah tidak dijalankan lagi karena kondisinya sudah bernilai salah (`i <= 10` untuk nilai `i = 11`).
-
-Potongan kode berikut menampilkan pola 2 4 6 8 ... 100 di layar console
-```c
-int i = 2;
-while (i < 102) {
-    printf("%d ", i);
-    i = i + 2;
-}
-```
-
-Analisa kode di atas:
-
-1. Variabel `i` dideklarasikan kemudian diisi dengan nilai awal pola yaitu 2
-2. Selagi `i` bernilai kurang dari 102, maka jalankan perintah `printf("%d ", i)` kemudian `i = i + 2`. Dalam tahap ini, sembari mengulang operasi, nilai dari variabel `i` ditampilkan di layar kemudian ditambah dengan 2 dan kedua perintah tersebut diulang terus menerus sampai keluar dari perulangan.
-
-**Q:** Bagaimana bisa keluar dari perulangan?
-
-**A:** Ada yang bisa menjelaskan?
-
-### Source code
-
-<details>
-<summary>Contoh source code (full)</summary>
+### Studi Kasus: Bebek Bersuara (Duck Quacker)
 
 ```c
 #include <stdio.h>
+
 int main() {
-    int i, count;
-    
-    printf("Masukkan jumlah quack: ");
-    scanf("%d", &count);
-    
-    i = 1;
-    while (i <= count) {
+    int totalQuack;
+    int i = 1; // 1. Inisialisasi
+
+    printf("Berapa kali bebek ingin bersuara? ");
+    scanf("%d", &totalQuack);
+
+    printf("\nBebek bersuara: ");
+    // 2. Kondisi perulangan
+    while (i <= totalQuack) {
         printf("Quack! ");
-        i++;
+        i++; // 3. Update counter (menambah nilai i setiap putaran)
     }
-    printf("\n");
+    printf("\n\nSelesai! Bebek sudah lelah bersuara.\n");
 
     return 0;
 }
-
-/*
-Output:
-
-Masukkan jumlah quack: 3
-Quack! Quack! Quack!
-*/
 ```
+
+**Hasil Eksekusi:**
+```text
+Berapa kali bebek ingin bersuara? 4
+
+Bebek bersuara: Quack! Quack! Quack! Quack! 
+
+Selesai! Bebek sudah lelah bersuara.
+```
+
+> [!WARNING]
+> ### 🛑 Apa itu Infinite Loop?
+> Jika pada kode di atas baris `i++;` dihapus, maka nilai `i` akan selamanya bernilai `1`. Karena `1 <= 4` akan selalu bernilai BENAR selamanya, programmu tidak akan pernah berhenti mencetak `Quack!` sampai terminal dihentikan paksa (tekan `Ctrl + C` untuk mematikan program yang macet).
+
+---
+
+## 🥊 Tantangan & Mini Kuis
+
+### Tebak Pola Output!
+Perhatikan potongan kode `while` berikut:
+```c
+int counter = 2;
+while (counter <= 10) {
+    printf("%d ", counter);
+    counter += 2;
+}
+```
+Deret angka apakah yang akan dicetak di layar console?
+
+<details>
+<summary>🔍 <b>Klik untuk Buka Kunci Jawaban</b></summary>
+
+**Output:** `2 4 6 8 10 `  
+**Penjelasan:** Loop dimulai dari `counter = 2`, mencetak nilainya, lalu bertambah `+2` setiap putaran (`2 -> 4 -> 6 -> 8 -> 10`). Ketika `counter` menjadi `12`, kondisi `12 <= 10` bernilai SALAH, sehingga loop berhenti.
 </details>
 
-Bab 1 selesai. [Kembali ke Daftar Materi](../DaftarMateri.md)
+---
+
+<div align="center">
+
+### 🎓 Selamat! Kamu Telah Menuntaskan Seluruh Materi Bab 2!
+
+[⬅️ Sebelumnya: 2.3 Operator Aritmatika](03-Operator-Aritmatika-dan-Assignment.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Daftar Materi Utama](../Daftar_Materi.md) &nbsp;&nbsp;|&nbsp;&nbsp; [Lanjut ke Bab 3: Program Control ➡️](../bab-03-program-control/Bab3-Overview.md)
+
+</div>

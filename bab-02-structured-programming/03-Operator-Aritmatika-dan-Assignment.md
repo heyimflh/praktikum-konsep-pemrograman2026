@@ -1,97 +1,178 @@
-[⬅️ Kembali ke README Bab 2](README.md)
+<div align="center">
 
-# 2.3 Operator Assignment & Aritmatika
+# ⚡ 2.3 Operator Aritmatika & Assignment
+### Bab 2: Structured Programming · Mesin Hitung Komputer
 
-## Operator Assignment
-
-Operator paling dasar yang sudah sering dipakai tanpa disadari:
-
-```c
-int x = 10;   // '=' adalah operator assignment: "berikan nilai 10 ke x"
-```
-
-C juga menyediakan **compound assignment** — penulisan singkat untuk operasi + assignment sekaligus:
-
-| Operator | Contoh | Setara Dengan |
-|---|---|---|
-| `+=` | `x += 5;` | `x = x + 5;` |
-| `-=` | `x -= 3;` | `x = x - 3;` |
-| `*=` | `x *= 2;` | `x = x * 2;` |
-| `/=` | `x /= 4;` | `x = x / 4;` |
-| `%=` | `x %= 3;` | `x = x % 3;` |
-
-## Operator Aritmatika
-
-| Operator | Arti | Contoh | Hasil |
-|---|---|---|---|
-| `+` | Penjumlahan | `5 + 3` | `8` |
-| `-` | Pengurangan | `5 - 3` | `2` |
-| `*` | Perkalian | `5 * 3` | `15` |
-| `/` | Pembagian | `5 / 2` | `2` (integer!) |
-| `%` | Modulo (sisa bagi) | `5 % 2` | `1` |
-
-### ⚠️ Jebakan Pembagian Integer
-
-Ini salah satu sumber bug paling sering ditemui pemula:
-
-```c
-int a = 7, b = 2;
-printf("%d\n", a / b);            // Output: 3  (bukan 3.5!)
-printf("%.2f\n", (float)a / b);   // Output: 3.50 -> pakai type casting
-```
-
-Karena `a` dan `b` sama-sama `int`, hasil pembagian **dibulatkan ke bawah** (dibuang bagian desimalnya), bukan dibulatkan matematis. Untuk mendapat hasil desimal, **cast** salah satu operand menjadi `float`/`double` dengan `(float)` sebelum pembagian.
-
-### Operator Increment & Decrement
-
-```c
-int i = 5;
-i++;   // sama dengan i = i + 1  -> i menjadi 6
-i--;   // sama dengan i = i - 1  -> i menjadi 5 lagi
-```
-
-Ada dua bentuk yang perilakunya berbeda saat digunakan langsung dalam ekspresi:
-
-```c
-int a = 5;
-printf("%d\n", a++);  // Output: 5 (nilai dipakai DULU, baru ditambah -> post-increment)
-printf("%d\n", a);    // Output: 6
-
-int b = 5;
-printf("%d\n", ++b);  // Output: 6 (ditambah DULU, baru dipakai -> pre-increment)
-```
-
-## Operator Precedence (Urutan Operasi)
-
-Sama seperti matematika, C punya urutan prioritas operator. Urutan singkatnya (dari tertinggi):
-
-```
-1. ( )               -> tanda kurung
-2. ++ --              -> increment/decrement
-3. * / %              -> perkalian, pembagian, modulo
-4. + -                -> penjumlahan, pengurangan
-5. =  +=  -=  dst      -> assignment (paling akhir dieksekusi)
-```
-
-```c
-int hasil = 2 + 3 * 4;      // = 2 + 12 = 14 (BUKAN 20)
-int hasil2 = (2 + 3) * 4;   // = 5 * 4 = 20  (kurung mengubah urutan)
-```
-
-> 💡 Kalau ragu urutan operasi rumit, **selalu gunakan kurung eksplisit**. Kode jadi lebih mudah dibaca dan bebas dari bug precedence.
-
-## 🧪 Latihan Cepat
-
-1. Tebak dulu output kode berikut sebelum menjalankannya:
-   ```c
-   int a = 10, b = 3;
-   printf("%d\n", a % b);
-   printf("%d\n", a / b);
-   printf("%.2f\n", (float)a / b);
-   ```
-2. Buat program konversi suhu Celsius ke Fahrenheit: `F = (C * 9/5) + 32`. Perhatikan potensi jebakan pembagian integer pada `9/5`!
-3. Buat program yang menghitung luas dan keliling lingkaran dari jari-jari yang diinput pengguna (`π` gunakan `3.14159`).
-4. Buat program sederhana kalkulator (`+ - * /`) dua bilangan bulat yang diinput pengguna, dengan hasil pembagian ditampilkan sebagai desimal 2 angka di belakang koma.
+[⬅️ Modul 2.2: Algoritma & Pseudocode](02-Algoritma-Pseudocode-SourceCode.md) &nbsp;•&nbsp; [Overview Bab 2](Bab2-Overview.md) &nbsp;•&nbsp; [Modul 2.4: Pemilihan & Perulangan ➡️](04-PemilihandanPerulanganSederhana.md)
 
 ---
-⬅️ [Sebelumnya: Algoritma, Pseudocode & Source Code](02-Algoritma-Pseudocode-SourceCode.md) | ➡️ [Lanjut: Pemilihan dan Perulangan](04-PemilihandanPerulanganSederhana.md)
+
+</div>
+
+## 🧮 Dunia Operator dalam Bahasa C
+
+Komputer pada dasarnya adalah kalkulator raksasa berkecepatan miliaran instruksi per detik. Untuk melakukan kalkulasi dan manipulasi data, bahasa C menyediakan berbagai macam **operator**. 
+
+Di modul ini, kita akan mengupas tuntas:
+1. Operator Assignment (Penugasan)
+2. Operator Aritmatika & Jebakan Integer Division
+3. Perbedaan Kritis Pre-increment vs Post-increment
+4. Hierarki Prioritas Operator (*Precedence*)
+
+---
+
+## 1️⃣ Operator Assignment (Penugasan)
+
+Operator assignment dasar adalah tanda sama dengan (`=`). Simbol ini **bukan** menyatakan kesamaan matematis, melainkan instruksi: *"Ambil nilai dari ruas kanan, lalu simpan ke dalam variabel di ruas kiri!"*
+
+```c
+int skor = 100;  // Masukkan angka 100 ke dalam kotak bernama skor
+```
+
+### Compound Assignment (Penulisan Cepat)
+
+Bahasa C menyediakan singkatan (*shorthand*) elegan untuk memodifikasi nilai variabel dengan nilai lamanya:
+
+| Operator | Contoh Penggunaan | Makna / Setara Dengan | Contoh Kasus (Awal: `x = 10`) | Hasil Akhir `x` |
+|:---:|---|---|---|:---:|
+| `+=` | `x += 5;` | `x = x + 5;` | Nilai `x` ditambah 5 | `15` |
+| `-=` | `x -= 3;` | `x = x - 3;` | Nilai `x` dikurang 3 | `7` |
+| `*=` | `x *= 2;` | `x = x * 2;` | Nilai `x` dikali 2 | `20` |
+| `/=` | `x /= 4;` | `x = x / 4;` | Nilai `x` dibagi 4 | `2` |
+| `%=` | `x %= 3;` | `x = x % 3;` | Sisa bagi `x` dengan 3 | `1` |
+
+---
+
+## 2️⃣ Operator Aritmatika
+
+| Simbol | Nama Operasi | Contoh Kode | Hasil |
+|:---:|---|---|:---:|
+| `+` | Penjumlahan | `7 + 3` | `10` |
+| `-` | Pengurangan | `7 - 3` | `4` |
+| `*` | Perkalian | `7 * 3` | `21` |
+| `/` | Pembagian | `7 / 2` | `3` *(Awas: bukan 3.5!)* |
+| `%` | Modulo (Sisa Bagi Bulat) | `7 % 3` | `1` *(karena $7 = 3 \times 2 + 1$)* |
+
+> [!WARNING]
+> ### 🚨 Jebakan Batman: Pembagian Integer & Solusi Type Casting
+> Di dalam bahasa C:
+> - `integer / integer` menghasilkan **integer** (seluruh pecahan desimal dipotong habis / dibuang ke bawah).
+> - `float / integer` atau `integer / float` menghasilkan **float**.
+>
+> ```c
+> int a = 7, b = 2;
+> printf("%d\n", a / b);            // Output: 3  (Bukan 3.5!)
+> printf("%.2f\n", (float)a / b);   // Output: 3.50 (Solusi: Type Casting!)
+> ```
+> Dengan menuliskan `(float)a`, kita mengubah nilai variabel `a` menjadi desimal `7.0f` untuk operasi tersebut, sehingga komputasi menjadi `7.0f / 2 = 3.5f`.
+
+---
+
+## 3️⃣ Increment & Decrement: Pre vs Post
+
+Operator `++` (tambah 1) dan `--` (kurang 1) sangat populer dalam perulangan loop. Namun, posisinya menentukan kapan penambahan nilai terjadi!
+
+```
+a++ (Post-Increment) : "Gunakan nilainya sekarang, baru tambahkan setelahnya."
+++a (Pre-Increment)  : "Tambahkan nilainya dulu, baru gunakan nilai barunya."
+```
+
+### Visualisasi Perbandingan:
+
+```c
+// Kasus 1: Post-Increment (a++)
+int a = 5;
+int hasil1 = a++; 
+// Langkah 1: hasil1 diisi nilai a saat ini (5)
+// Langkah 2: a naik menjadi 6
+// Nilai akhir: hasil1 = 5, a = 6
+
+// Kasus 2: Pre-Increment (++b)
+int b = 5;
+int hasil2 = ++b; 
+// Langkah 1: b langsung naik menjadi 6
+// Langkah 2: hasil2 diisi nilai b yang baru (6)
+// Nilai akhir: hasil2 = 6, b = 6
+```
+
+---
+
+## 4️⃣ Operator Precedence (Hierarki Prioritas)
+
+Sama seperti aturan matematika PEMDAS / Kabataku, bahasa C memiliki tingkatan prioritas kapan suatu operator dievaluasi:
+
+| Prioritas | Kategori Operator | Simbol | Arah Asosiasi |
+|:---:|---|---|:---:|
+| **1 (Tertinggi)** | Kurung Grouping | `( )` | Kiri ke Kanan |
+| **2** | Unary / Increment | `++`, `--`, `+`, `-` | Kanan ke Kiri |
+| **3** | Perkalian / Pembagian / Sisa | `*`, `/`, `%` | Kiri ke Kanan |
+| **4** | Penjumlahan / Pengurangan | `+`, `-` | Kiri ke Kanan |
+| **5 (Terendah)** | Penugasan (*Assignment*) | `=`, `+=`, `-=`, `*=`, `/=` | Kanan ke Kiri |
+
+> [!TIP]
+> **Pro-Tip:** Jika kamu tidak yakin urutan prioritas suatu rumus yang panjang, **selalu pasang tanda kurung `( )` secara eksplisit**. Kodinganmu akan jauh lebih mudah dibaca rekan satu tim dan aman dari bug tersembunyi!
+
+---
+
+## 🥊 Tantangan & Tebak Output
+
+### Kuis 1: Analisis Ekspresi
+Tebak nilai dari variabel `z` berikut sebelum melihat pembahasannya:
+```c
+int x = 4;
+int y = 3;
+int z = (x++) * 2 + (--y);
+```
+Berapakah nilai `z`, `x`, dan `y` di akhir?
+
+<details>
+<summary>🔍 <b>Klik untuk Buka Kunci Jawaban</b></summary>
+
+**Jawaban:**
+- Nilai `z` = **10**
+- Nilai `x` = **5**
+- Nilai `y` = **2**
+
+**Langkah Penjelasan:**
+1. `(x++)` mengevaluasi nilai lama `x` yaitu `4`, lalu menjadwalkan penambahan `x` menjadi `5`.
+2. `(--y)` langsung mengurangi `y` dari `3` menjadi `2`, dan menggunakan nilai `2`.
+3. Komputasi: `4 * 2 + 2 = 8 + 2 = 10`.
+4. Hasil `10` disimpan ke variabel `z`.
+</details>
+
+---
+
+### Kuis 2: Latihan Konversi Suhu
+Buatlah program C bernama `suhu.c` yang meminta input suhu dalam derajat **Celcius** (tipe data `float`), lalu menghitung dan mencetak suhunya dalam **Fahrenheit** dengan rumus:
+$$F = \left(C \times \frac{9}{5}\right) + 32$$
+
+> ⚠️ **Peringatan:** Jika kamu menulis `9/5` di C, hasilnya adalah `1` (karena pembagian integer). Pastikan menulis `9.0f / 5.0f` atau `(float)9 / 5`!
+
+<details>
+<summary>💻 <b>Klik untuk Melihat Solusi Program C</b></summary>
+
+```c
+#include <stdio.h>
+
+int main() {
+    float celsius, fahrenheit;
+
+    printf("Masukkan suhu dalam Celsius: ");
+    scanf("%f", &celsius);
+
+    // Menggunakan 9.0f / 5.0f untuk menjamin komputasi desimal
+    fahrenheit = (celsius * (9.0f / 5.0f)) + 32.0f;
+
+    printf("%.2f °C = %.2f °F\n", celsius, fahrenheit);
+    return 0;
+}
+```
+</details>
+
+---
+
+<div align="center">
+
+[⬅️ Sebelumnya: 2.2 Algoritma & Pseudocode](02-Algoritma-Pseudocode-SourceCode.md) &nbsp;&nbsp;|&nbsp;&nbsp; [Lanjut ke 2.4: Pemilihan & Perulangan Sederhana ➡️](04-PemilihandanPerulanganSederhana.md)
+
+</div>
