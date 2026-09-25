@@ -65,9 +65,10 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Pengenalan Array |
-| ⏳ | **ii** | Array Multidimensi |
-| ⏳ | **iii** | Array Sebagai Parameter Fungsi |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 5**](bab-05-array/Bab5-Overview.md) |
+| ✅ | **i** | [Pengenalan Array](bab-05-array/01-Pengenalan-Array.md) |
+| ✅ | **ii** | [Array Multidimensi](bab-05-array/02-Array-Multidimensi.md) |
+| ✅ | **iii** | [Array Sebagai Parameter Fungsi](bab-05-array/03-Array-Sebagai-Parameter-Fungsi.md) |
 
 </details>
 
