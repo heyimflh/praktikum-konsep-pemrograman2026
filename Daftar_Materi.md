@@ -78,9 +78,13 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Pengenalan |
-| ⏳ | **ii** | PassByRef |
-| ⏳ | **iii** | DMA |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 6**](bab-06-pointer/Bab6-Overview.md) |
+| ✅ | **6.1** | [Pengenalan Pointer](bab-06-pointer/01-Pengenalan-Pointer.md) |
+| ✅ | **6.2** | [Pointer dan Array](bab-06-pointer/02-Pointer-dan-Array.md) |
+| ✅ | **6.3** | [Pass By Reference](bab-06-pointer/03-Pass-By-Reference.md) |
+| ✅ | **6.4** | [Dynamic Memory Allocation (DMA)](bab-06-pointer/04-Dynamic-Memory-Allocation.md) |
+| ✅ | **6.5** | [Kesalahan Umum & Debugging](bab-06-pointer/05-Kesalahan-Umum-dan-Debugging.md) |
+| ✅ | **6.6** | [Latihan dan Rangkuman](bab-06-pointer/06-Latihan-dan-Rangkuman.md) |
 
 </details>
 
