@@ -94,8 +94,10 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Printf Formats |
-| ⏳ | **ii** | Scanf Formats |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 7**](bab-07-formatted-io/Bab7-Overview.md) |
+| ✅ | **7.1** | [Printf Formats (Keluaran Berformat)](bab-07-formatted-io/01-Printf-Formats.md) |
+| ✅ | **7.2** | [Scanf Formats (Masukan Berformat)](bab-07-formatted-io/02-Scanf-Formats.md) |
+| ✅ | **7.3** | [Latihan & Studi Kasus](bab-07-formatted-io/03-Latihan-dan-Studi-Kasus.md) |
 
 </details>
 

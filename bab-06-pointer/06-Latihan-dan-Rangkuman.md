@@ -507,6 +507,6 @@ Kamu telah mempelajari salah satu konsep paling fundamental dan paling kuat dala
 
 <div align="center">
 
-[⬅️ Sebelumnya: 6.5 Debugging](05-Kesalahan-Umum-dan-Debugging.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Kembali ke Daftar Materi Utama](../Daftar_Materi.md)
+[⬅️ Sebelumnya: 6.5 Debugging](05-Kesalahan-Umum-dan-Debugging.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Daftar Materi Utama](../Daftar_Materi.md) &nbsp;&nbsp;|&nbsp;&nbsp; [Lanjut ke Bab 7: Formatted I/O ➡️](../bab-07-formatted-io/Bab7-Overview.md)
 
 </div>
