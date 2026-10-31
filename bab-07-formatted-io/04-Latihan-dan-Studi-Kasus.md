@@ -608,6 +608,6 @@ Rata-rata dari 3 data valid: 83.65
 
 <div align="center">
 
-[⬅️ Sebelumnya: Modul 7.3 String I/O & Input Aman](03-String-IO-dan-Input-Aman.md) &nbsp;&nbsp;|&nbsp;&nbsp; [🏠 Kembali ke Overview Bab 7](Bab7-Overview.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Daftar Materi Utama](../Daftar_Materi.md)
+[⬅️ Sebelumnya: Modul 7.3 String I/O & Input Aman](03-String-IO-dan-Input-Aman.md) &nbsp;&nbsp;|&nbsp;&nbsp; [🏠 Kembali ke Overview Bab 7](Bab7-Overview.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Daftar Materi Utama](../Daftar_Materi.md) &nbsp;&nbsp;|&nbsp;&nbsp; [Lanjut ke Bab 8: Topik C Lanjutan ➡️](../bab-08-topik-c-lanjutan/Bab8-Overview.md)
 
 </div>

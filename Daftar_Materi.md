@@ -107,9 +107,10 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Struct dan Union |
-| ⏳ | **ii** | Bit Manipulation |
-| ⏳ | **iii** | Enumeration |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 8**](bab-08-topik-c-lanjutan/Bab8-Overview.md) |
+| ✅ | **8.1** | [Struct dan Union](bab-08-topik-c-lanjutan/01-Struct-dan-Union.md) |
+| ✅ | **8.2** | [Bit Manipulation](bab-08-topik-c-lanjutan/02-Bit-Manipulation.md) |
+| ✅ | **8.3** | [Enumeration](bab-08-topik-c-lanjutan/03-Enumeration.md) |
 
 </details>
 
@@ -119,9 +120,10 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Pengantar File Processing |
-| ⏳ | **ii** | Sequential Access |
-| ⏳ | **iii** | Random Access |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 9**](bab-09-file-processing/Bab9-Overview.md) |
+| ✅ | **9.1** | [Pengantar File Processing](bab-09-file-processing/01-Pengantar-File-Processing.md) |
+| ✅ | **9.2** | [Sequential Access](bab-09-file-processing/02-Sequential-Access.md) |
+| ✅ | **9.3** | [Random Access](bab-09-file-processing/03-Random-Access.md) |
 
 </details>
 
