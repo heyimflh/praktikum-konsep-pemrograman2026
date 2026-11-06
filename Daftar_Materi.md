@@ -133,9 +133,10 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Array Linked List |
-| ⏳ | **ii** | Stack Queue |
-| ⏳ | **iii** | Tree |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 10**](bab-10-struktur-data/Bab10-Overview.md) |
+| ✅ | **10.1** | [Array dan Linked List](bab-10-struktur-data/1-ArrayLinkedList.md) |
+| ✅ | **10.2** | [Stack dan Queue](bab-10-struktur-data/2-StackQueue.md) |
+| ✅ | **10.3** | [Tree](bab-10-struktur-data/3-Tree.md) |
 
 </details>
 

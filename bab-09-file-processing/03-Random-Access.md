@@ -233,7 +233,7 @@ int main() {
 
 <div align="center">
 
-[⬅️ Sebelumnya: Modul 9.2 Sequential Access](02-Sequential-Access.md) &nbsp;&nbsp;|&nbsp;&nbsp; [🏠 Overview Bab 9](Bab9-Overview.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Daftar Materi Utama](../Daftar_Materi.md)
+[⬅️ Sebelumnya: Modul 9.2 Sequential Access](02-Sequential-Access.md) &nbsp;&nbsp;|&nbsp;&nbsp; [🏠 Overview Bab 9](Bab9-Overview.md) &nbsp;&nbsp;|&nbsp;&nbsp; [📋 Daftar Materi Utama](../Daftar_Materi.md) &nbsp;&nbsp;|&nbsp;&nbsp; [Lanjut ke Bab 10: Struktur Data ➡️](../bab-10-struktur-data/Bab10-Overview.md)
 
 </div>
 
