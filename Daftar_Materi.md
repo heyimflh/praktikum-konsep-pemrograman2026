@@ -146,9 +146,10 @@
 
 | Status | Modul | Topik Pembelajaran |
 |:---:|:---:|---|
-| ⏳ | **i** | Pengantar |
-| ⏳ | **ii** | Symbolic Constant dan Macro |
-| ⏳ | **iii** | Conditional Compilation |
+| ✅ | **0** | [**Pendahuluan & Overview Bab 11**](bab-11-preprocessor/Bab11-Overview.md) |
+| ✅ | **11.1** | [Pengantar Preprocessor](bab-11-preprocessor/Bab-11-Bagian-1-Pengantar-dan-Macro.md#111--pengantar-preprocessor) |
+| ✅ | **11.2** | [Symbolic Constant dan Macro](bab-11-preprocessor/Bab-11-Bagian-1-Pengantar-dan-Macro.md#112--symbolic-constant-dan-macro) |
+| ✅ | **11.3** | [Conditional Compilation](bab-11-preprocessor/Bab-11-Bagian-2-Conditional-Compilation.md) |
 
 </details>
 
